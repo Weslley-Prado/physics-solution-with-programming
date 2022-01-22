@@ -25,3 +25,4 @@ def calculator_average_speed():
 
 
 calculator_average_speed()
+
