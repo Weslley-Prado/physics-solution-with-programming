@@ -9,9 +9,19 @@ print("After driving a car on a straight road for eight kilometers and four hund
 
 print("\n a) What was the total displacement from the start of the trip to the gas station?")
 
-distanceDriving = float(input("Write the distance that you drived: "))
-distanceWalking = float(input("Now, write the distance that you walked: "))
-distanceInitial = float(input("Now, write the distance initial: "))
 
-distanceTotal = (distanceDriving + distanceWalking) - distanceInitial
-print(f'The total distance is {distanceTotal}')
+def calculator_average_speed():
+    distanceDriving = input("Write the distance that you drived: ")
+    distanceWalking = input("Now, write the distance that you walked: ")
+    distanceInitial = input("Now, write the distance initial: ")
+    try:
+        float(distanceDriving)
+        float(distanceWalking)
+        float(distanceInitial)
+        distanceTotal = (float(distanceDriving) + float(distanceWalking)) - float(distanceInitial)
+        print(f'The total distance is {distanceTotal:.2f}')
+    except ValueError:
+        return False
+
+
+calculator_average_speed()
