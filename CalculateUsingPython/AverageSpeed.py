@@ -14,12 +14,20 @@ def calculator_average_speed():
     distanceDriving = input("Write the distance that you drived: ")
     distanceWalking = input("Now, write the distance that you walked: ")
     distanceInitial = input("Now, write the distance initial: ")
+    timeInitial = input("What was it time initial? ")
+    timeFinal = input("What was it time final? ")
+
     try:
         float(distanceDriving)
         float(distanceWalking)
         float(distanceInitial)
-        distanceTotal = (float(distanceDriving) + float(distanceWalking)) - float(distanceInitial)
-        print(f'The total distance is {distanceTotal:.2f}')
+        float(timeInitial)
+        distanceTraveled = (float(distanceDriving) + float(distanceWalking)) - float(distanceInitial)
+        print(f'The total distance is {distanceTraveled:.2f}')
+        timeTraveled = float(timeFinal) - float(timeInitial)
+        averageSpeed = float(distanceTraveled)/timeTraveled
+        print(f'This is average speed is {averageSpeed:.2f} m/s')
+
     except ValueError:
         return False
 
